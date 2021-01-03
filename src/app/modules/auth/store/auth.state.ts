@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { delay, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 
 import { LoginWithEmailAndPassword, Logout } from './auth.actions';
 import { AuthStateModel } from './auth.model';
@@ -16,8 +16,10 @@ const getDefaultState = (): AuthStateModel => ({
   userEmail: null
 });
 
+export const stateName = 'auth';
+
 @State<AuthStateModel>({
-  name: 'auth',
+  name: stateName,
   defaults: getDefaultState()
 })
 @Injectable()
@@ -45,7 +47,7 @@ export class AuthState {
     return !!token;
   }
 
-  constructor(private authService: AuthService) {}
+  constructor(private readonly authService: AuthService) {}
 
   @Action(LoginWithEmailAndPassword)
   loginWithEmailAndPassword(
