@@ -1,0 +1,32 @@
+<form [formGroup]="form">
+  <mat-form-field class="form-group">
+    <mat-label>Email</mat-label>
+    <input type="text"
+           matInput
+           name="email"
+           formControlName="email"
+           placeholder="jan.kowalski@gmail.com"
+           autocomplete="off">
+    <mat-error *ngIf="form.get('email').invalid">
+      {{ form.get('email').errors | validationMessage }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-group">
+    <mat-label>Hasło</mat-label>
+    <input type="password"
+           matInput
+           name="password"
+           formControlName="password">
+    <mat-error *ngIf="form.get('password').invalid">
+      {{ form.get('password').errors | validationMessage }}
+    </mat-error>
+  </mat-form-field>
+  <div class="action-container">
+    <button type="button"
+            mat-flat-button
+            color="primary"
+            name="loginBtn"
+            [disabled]="form.invalid || loggingIn"
+            (click)="submit()">Zaloguj</button>
+  </div>
+</form>

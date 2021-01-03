@@ -1,0 +1,14 @@
+:host {
+  .form-group {
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .action-container {
+    margin-top: 5rem;
+    text-align: right;
+  }
+}
