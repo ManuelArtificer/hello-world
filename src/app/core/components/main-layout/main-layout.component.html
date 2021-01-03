@@ -1,0 +1,7 @@
+<hw-main-header class="page-header"
+                [userName]="(user$ | async)?.name"
+                [loggingOut]="loggingOut"
+                (logout)="logout()"></hw-main-header>
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>

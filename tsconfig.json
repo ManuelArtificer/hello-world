@@ -6,6 +6,7 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictNullChecks": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -19,7 +20,30 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@auth": [
+        "./src/app/modules/auth"
+      ],
+      "@auth/*": [
+        "./src/app/modules/auth/*"
+      ],
+      "@core": [
+        "./src/app/core"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@environments": [
+        "./src/environments"
+      ],
+      "@shared": [
+        "./src/app/shared"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,

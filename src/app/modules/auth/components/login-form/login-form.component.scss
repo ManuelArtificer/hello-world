@@ -1,0 +1,19 @@
+:host {
+  .form-group {
+    width: 100%;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .error-message {
+    margin-top: 1rem;
+    display: block;
+  }
+
+  .action-container {
+    margin-top: 5rem;
+    text-align: right;
+  }
+}
