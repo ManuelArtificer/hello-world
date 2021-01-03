@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/reset';
+@import 'styles/colors';
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: sans-serif;
+  color: $black;
+  background-color: $white-smoke;
+}
+
+html,
+body {
+  height: 100%;
+}
