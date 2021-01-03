@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 import { UserAuth } from '../models/user-auth';
 import { BaseApiService } from '@shared/abstracts/base-api.service';
 import { ApiResult } from '@shared/models/api-result';
-import { ConfigService } from '@core';
+import { ConfigService } from '../../../core/services/config.service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,12 @@
+<mat-toolbar color="primary"
+             class="main-header">
+  <span class="logo">Hello World</span>
+  <div class="user-bar">
+    <span class="user-name">{{ userName }}</span>
+    <button mat-button
+            type="button"
+            class="logout-btn"
+            [disabled]="loggingOut"
+            (click)="logout.emit()">Wyloguj</button>
+  </div>
+</mat-toolbar>
