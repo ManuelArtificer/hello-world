@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'hw-main-header',
@@ -6,12 +6,8 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output
   styleUrls: ['./main-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MainHeaderComponent implements OnInit {
+export class MainHeaderComponent {
   @Input() userName: string;
   @Input() loggingOut: boolean;
   @Output() logout: EventEmitter<void> = new EventEmitter<void>();
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
