@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'hw-main-header',
   templateUrl: './main-header.component.html',
-  styleUrls: ['./main-header.component.scss']
+  styleUrls: ['./main-header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainHeaderComponent implements OnInit {
   @Input() userName: string;

@@ -21,6 +21,7 @@
       {{ form.get('password').errors | validationMessage }}
     </mat-error>
   </mat-form-field>
+  <span class="error-message mat-error">{{ errorMessage }}</span>
   <div class="action-container">
     <button type="button"
             mat-flat-button

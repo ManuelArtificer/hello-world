@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges
+} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { UserCredential } from '../../models/user-credential';
@@ -6,10 +14,12 @@ import { UserCredential } from '../../models/user-credential';
 @Component({
   selector: 'hw-login-form',
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  styleUrls: ['./login-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginFormComponent implements OnChanges {
   @Input() loggingIn = false;
+  @Input() errorMessage: string = null;
   @Output() submitForm: EventEmitter<UserCredential> = new EventEmitter<UserCredential>();
   form: FormGroup;
 

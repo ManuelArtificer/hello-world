@@ -10,7 +10,12 @@ const routes: Routes = [
     path: '',
     component: MainLayoutComponent,
     canActivate: [AuthGuard],
-    children: []
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule)
+      }
+    ]
   },
   {
     path: 'auth',
