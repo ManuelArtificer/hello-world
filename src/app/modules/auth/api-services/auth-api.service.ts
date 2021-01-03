@@ -4,8 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { UserAuth } from '../models/user-auth';
-import { BaseApiService } from '@shared/abstracts/base-api.service';
-import { ApiResult } from '@shared/models/api-result';
+import { BaseApiService, ApiResult } from '@shared';
 import { ConfigService } from '../../../core/services/config.service';
 
 @Injectable({
