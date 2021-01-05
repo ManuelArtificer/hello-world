@@ -6,9 +6,8 @@ import { NgxsModule } from '@ngxs/store';
 import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin/';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 
+import { MaterialModule } from '../material.module';
 import { ConfigProvider, CONFIG_PROVIDER } from './services/config-provider';
 import { HttpConfigProviderService } from './services/http-config-provider.service';
 import { environment } from '@environments';
@@ -40,8 +39,7 @@ export function configFactory(configProvider: ConfigProvider): () => Promise<voi
     NgxsReduxDevtoolsPluginModule.forRoot({
       disabled: environment.production
     }),
-    MatToolbarModule,
-    MatButtonModule
+    MaterialModule
   ],
   providers: [
     {
